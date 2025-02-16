@@ -1,0 +1,17 @@
+Several approaches can mitigate the issues with the `calc()` function:
+
+1. **Using ems or rems:** Instead of percentages and pixels, use `em` or `rem` units, which scale relative to the font size of the parent or root element, respectively.  This approach often provides more consistent and predictable results across different contexts.
+
+2. **JavaScript:**  For more complex scenarios or when pixel-perfect precision is essential, use JavaScript to dynamically calculate the width based on the parent element's dimensions.
+
+3. **Absolute positioning and transforms:** If the layout allows, consider using absolute positioning and transforms to accurately control the element's position and size, avoiding the potential pitfalls of `calc()`.
+
+Here's an example solution using `em` units:
+
+```css
+div {
+  width: calc(50% - 1em);
+}
+```
+
+Choose the best solution that best suits your project's specific needs and constraints.
